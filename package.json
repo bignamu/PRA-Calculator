@@ -1,0 +1,39 @@
+{
+  "name": "pra-calculator",
+  "version": "1.0.0",
+  "description": "PRA (panel reactive antibody) calculator는 이식대기자의 unacceptable antigens에 근거하여 부적합할 것으로 예상되는 한국인 뇌사기증자의 비율을 계산하는 웹 기반의 프로그램입니다. cPRA (calculated panel reactive antibody)는 신장 또는 췌장 이식환자에서 감작 정도를 측정하기 위해 이용됩니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --env development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bignamu/PRA-Calculator.git"
+  },
+  "author": "Punkryn, Bignamu, 338LAPUA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bignamu/PRA-Calculator/issues"
+  },
+  "homepage": "https://github.com/bignamu/PRA-Calculator#readme",
+  "dependencies": {
+    "@fontsource/roboto": "^4.5.0",
+    "@material-ui/core": "^4.12.3",
+    "@mui/x-data-grid": "^4.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "babel-loader": "^8.2.2",
+    "react-refresh": "^0.9.0",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
