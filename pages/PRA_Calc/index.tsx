@@ -96,14 +96,31 @@ const PRA_Calc = () => {
         // console.log(i);
 
         if (i.startsWith("A")) {
-          //console.log(i.slice(1, i.length));
-          newForm.append("qa[]", i.slice(1, i.length));
+          let A_Result = i.slice(1, i.length);
+          if (A_Result.includes("(")) {
+            A_Result = A_Result.split("(")[0];
+          }
+
+          newForm.append("qa[]", A_Result);
         } else if (i.startsWith("Bw")) {
-          newForm.append("qbw", i.slice(2, i.length));
+          let Bw_Result = i.slice(2, i.length);
+          if (Bw_Result.includes("(")) {
+            Bw_Result = Bw_Result.split("(")[0];
+          }
+          newForm.append("qbw", Bw_Result);
         } else if (i.startsWith("B")) {
-          newForm.append("qb[]", i.slice(1, i.length));
+          let B_Result = i.slice(1, i.length);
+          if (B_Result.includes("(")) {
+            B_Result = B_Result.split("(")[0];
+          }
+          newForm.append("qb[]", B_Result);
         } else if (i.startsWith("Cw")) {
-          newForm.append("qc[]", i.slice(2, i.length));
+          let Cw_Result = i.slice(2, i.length);
+          if (Cw_Result.includes("(")) {
+            Cw_Result = Cw_Result.split("(")[0];
+          }
+
+          newForm.append("qc[]", Cw_Result);
         } else if (i.startsWith("DR51")) {
           newForm.append("qdr51", "51");
         } else if (i.startsWith("DR52")) {
