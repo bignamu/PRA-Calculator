@@ -139,7 +139,10 @@ const PRA_Calc = () => {
 
       //`https://cors-anywhere.herokuapp.com/${targetURL}`
       axios
-        .post(`http://220.122.152.222:8080/${targetURL}`, newForm)
+        .post(
+          `https://lit-brushlands-98480.herokuapp.com/${targetURL}`,
+          newForm
+        )
         .then((response) => {
           let resData = response.data;
 
