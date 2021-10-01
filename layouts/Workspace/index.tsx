@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import PRA_Calc from "@pages/PRA_Calc";
 import { Link, Switch, Route } from "react-router-dom";
 import { WorkSpace } from "@layouts/Workspace/styles";
 
 const Workspace = () => {
+  const [kyaruNumber, setkyaruNumber] = useState("1");
+  const [curImgUrl, setcurImgUrl] = useState(
+    "https://tlgrm.eu/_/stickers/a41/f44/a41f44da-1fbf-4127-8e99-30649c6b7b01/192/1.webp"
+  );
+
+  const Makekyaru = () => {
+    const RandList = Array.from({ length: 16 }, (x, i) => i + 1);
+    // console.log(RandList);
+
+    let rand = Math.floor(Math.random() * (RandList.length - 1));
+    setkyaruNumber(String(RandList[rand]));
+    setcurImgUrl(
+      `https://tlgrm.eu/_/stickers/a41/f44/a41f44da-1fbf-4127-8e99-30649c6b7b01/192/${kyaruNumber}.webp`
+    );
+  };
+
   return (
     <>
       <WorkSpace>
@@ -17,8 +33,9 @@ const Workspace = () => {
             </div>
             <nav>
               <img
-                src="https://tlgrm.eu/_/stickers/a41/f44/a41f44da-1fbf-4127-8e99-30649c6b7b01/192/1.webp"
+                src={curImgUrl}
                 alt="개발자한테 앙망하기"
+                onClick={Makekyaru}
               />
               <div>개발자한테 문의하기</div>
             </nav>
